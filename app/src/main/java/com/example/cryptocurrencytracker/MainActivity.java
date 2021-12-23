@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> header = new HashMap<>();
                 //we pass key and value from postman
-                header.put("X-CMC_PRO_API_KEY", "686bbefe-b5e8-4c3c-945b-f3ada338a84c");
+                header.put("","");
                 return header;
 
             }
