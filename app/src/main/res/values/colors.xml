@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#0f9058</color>
+    <color name="purple_500">#0f9058</color>
+    <color name="purple_700">#0f9058</color>
+    <color name="teal_200">#0f9058</color>
+    <color name="teal_700">#0f9058</color>
+    <color name="black">#802448</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blackshad_1">#FF3F4460</color>
+    <color name="blackshad_2">#FF4C235E</color>
+    <color name="blackshad_3">#FF802448</color>
+</resources>
+
