@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:elevation="18dp"
+    android:background="#FFFFFF"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+
+        android:id="@+id/idLLCourse"
+        android:background="#0B4F93"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <!--text view for our course name-->
+        <TextView
+
+            android:id="@+id/TVStockName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Course Name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/TVStockDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Course Description"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <!--text view for our course duration-->
+        <TextView
+            android:id="@+id/TVStockDur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Course Duration"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <!--text view for our course description-->
+
+        <TextView
+            android:id="@+id/TVStockBuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="#4AAF04"
+            android:text="Stock Buy"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/TVStockSell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="#EC0202"
+            android:text="Stock Sell"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
