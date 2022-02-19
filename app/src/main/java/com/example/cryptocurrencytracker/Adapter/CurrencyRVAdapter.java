@@ -1,4 +1,4 @@
-package com.example.cryptocurrencytracker;
+package com.example.cryptocurrencytracker.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.cryptocurrencytracker.Model.CurrencyModel;
+import com.example.cryptocurrencytracker.R;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.cryptocurrencytracker;
+package com.example.cryptocurrencytracker.Model;
 
 public class CurrencyModel {
     private String name;

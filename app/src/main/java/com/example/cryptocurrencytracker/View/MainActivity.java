@@ -1,11 +1,6 @@
-package com.example.cryptocurrencytracker;
+package com.example.cryptocurrencytracker.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.app.VoiceInteractor;
-import android.opengl.Visibility;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -15,6 +10,10 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -22,6 +21,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.cryptocurrencytracker.Adapter.CurrencyRVAdapter;
+import com.example.cryptocurrencytracker.Model.CurrencyModel;
+import com.example.cryptocurrencytracker.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,13 +36,15 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    ProgressBar loadingbar;
-    EditText search;
-    RecyclerView currenciesRV;
+  private   ProgressBar loadingbar;
+   private EditText search;
+   private RecyclerView currenciesRV;
+   FloatingActionButton addnote;
 
 
     private ArrayList<CurrencyModel> currencyModelArrayList;
     private CurrencyRVAdapter currencyRVAdapter;
+
 
 
     public static final String TAG = "internetCall";
@@ -51,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
         search = findViewById(R.id.idSearch);
         currenciesRV = findViewById(R.id.idcurrencies);
         loadingbar = findViewById(R.id.idLoader);
+        addnote=findViewById(R.id.Addnote);
+
+
+
 
 
         currencyModelArrayList = new ArrayList<>();
@@ -63,16 +72,23 @@ public class MainActivity extends AppCompatActivity {
         getCurrencyData();
 
 
+        addnote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(MainActivity.this, Note_Act.class);
+                startActivity(i);
+            }
+        });
+
+
         //Searching Function
         search.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -81,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
     }
 

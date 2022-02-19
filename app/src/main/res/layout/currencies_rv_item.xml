@@ -5,14 +5,15 @@
     android:layout_height="125dp"
     android:layout_margin="4dp"
     android:elevation="3dp"
-    app:cardBackgroundColor="#014C91"
+    app:cardBackgroundColor="#00F6F6F6"
     app:cardCornerRadius="15dp">
+
 
     <LinearLayout
         android:id="@+id/idRLcurrency"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="15dp"
         android:orientation="vertical">
 
         <TextView
@@ -33,7 +34,7 @@
             android:layout_below="@+id/idTvname"
             android:layout_margin="3dp"
             android:layout_marginLeft="4dp"
-            android:layout_marginRight="2dp"
+            android:padding="3dp"
             android:text="Symbol"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -43,8 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/idTvSymbol"
+            android:layout_margin="3dp"
             android:layout_marginLeft="4dp"
-            android:layout_marginTop="5dp"
             android:padding="3dp"
             android:text="Price"
             android:textColor="@color/white"
@@ -52,6 +53,7 @@
 
 
     </LinearLayout>
+
 
 
 </androidx.cardview.widget.CardView>

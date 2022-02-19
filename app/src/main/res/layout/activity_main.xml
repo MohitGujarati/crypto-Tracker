@@ -3,8 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2C3E50"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#012C57"
+    tools:context=".View.MainActivity">
+
 
     <EditText
         android:id="@+id/idSearch"
@@ -16,20 +18,34 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idcurrencies"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/idSearch"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="-2dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Addnote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="90dp"
+        app:maxImageSize="50dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/note"
+
+        />
+
 
     <ProgressBar
         android:id="@+id/idLoader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-
-
         android:visibility="gone" />
 
 
