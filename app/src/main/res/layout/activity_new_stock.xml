@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#012C57"
+    android:background="#FFFFFF"
 
    >
 
@@ -15,8 +15,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/blackshad_1"
+        android:textColor="@color/blackshad_1"
         android:hint="Enter Stock Name" />
 
     <!--edit text for our course description-->
@@ -25,8 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/blackshad_1"
+        android:textColor="@color/blackshad_1"
         android:hint="Enter Stock Description" />
 
     <!--edit text for course description-->
@@ -35,8 +35,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/blackshad_1"
+        android:textColor="@color/blackshad_1"
         android:hint="Stock Duration" />
 
     <EditText
@@ -44,8 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/blackshad_1"
+        android:textColor="@color/blackshad_1"
         android:hint="Stock Buy" />
 
     <EditText
@@ -53,8 +53,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/blackshad_1"
+        android:textColor="@color/blackshad_1"
         android:hint="Stock Sell" />
 
     <!--button for saving data to room database-->

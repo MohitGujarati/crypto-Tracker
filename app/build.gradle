@@ -3,13 +3,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 30
+
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.example.cryptocurrencytracker"
         minSdkVersion 26
-        targetSdkVersion 31
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -30,27 +31,26 @@ android {
 
 dependencies {
 
+    //Glid
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+
     // add below dependency for using room.
-
     implementation "androidx.room:room-runtime:2.2.5"
-
     annotationProcessor "androidx.room:room-compiler:2.2.5"
-
-// add below dependency for using lifecycle extensions for room.
-
+   // add below dependency for using lifecycle extensions for room.
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
-
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.2.0"
+
+    //Volley
+    implementation 'com.android.volley:volley:1.2.1'
 
 
 
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'com.android.volley:volley:1.2.1'
-
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     testImplementation 'junit:junit:4.+'
-
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }

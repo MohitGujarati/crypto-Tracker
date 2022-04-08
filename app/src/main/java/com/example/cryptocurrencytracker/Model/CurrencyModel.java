@@ -2,17 +2,32 @@ package com.example.cryptocurrencytracker.Model;
 
 public class CurrencyModel {
     private String name;
-    private String symbol;
-    private double price;
-    // private double  identity;
 
-    public CurrencyModel(String name, String symbol, double price) {
+    private String symbol;
+    private String tags;
+    private double price;
+
+    // private double identity  ;
+
+    public CurrencyModel(String name, String symbol, String tags,double price) {
         this.name = name;
+
         this.symbol = symbol;
         this.price = price;
+        this.tags = tags;
+
 
     }
 
+
+
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
 
     public String getName() {
         return name;

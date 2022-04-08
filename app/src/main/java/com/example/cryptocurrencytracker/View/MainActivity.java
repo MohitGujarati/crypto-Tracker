@@ -36,15 +36,16 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-  private   ProgressBar loadingbar;
-   private EditText search;
-   private RecyclerView currenciesRV;
-   FloatingActionButton addnote;
+    private ProgressBar loadingbar;
+    private EditText search;
+    private RecyclerView currenciesRV;
+    FloatingActionButton addnote;
 
 
     private ArrayList<CurrencyModel> currencyModelArrayList;
     private CurrencyRVAdapter currencyRVAdapter;
 
+    public String logourl="";
 
 
     public static final String TAG = "internetCall";
@@ -56,12 +57,10 @@ public class MainActivity extends AppCompatActivity {
         search = findViewById(R.id.idSearch);
         currenciesRV = findViewById(R.id.idcurrencies);
         loadingbar = findViewById(R.id.idLoader);
-        addnote=findViewById(R.id.Addnote);
+        addnote = findViewById(R.id.Addnote);
 
 
-
-
-
+        //creating arraylist
         currencyModelArrayList = new ArrayList<>();
         currencyRVAdapter = new CurrencyRVAdapter(currencyModelArrayList, this);
 
@@ -69,18 +68,20 @@ public class MainActivity extends AppCompatActivity {
         //Setting this adapter to recycle view
         currenciesRV.setLayoutManager(new LinearLayoutManager(this));
         currenciesRV.setAdapter(currencyRVAdapter);
+
+
         getCurrencyData();
+
+
 
 
         addnote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this, Note_Act.class);
+                Intent i = new Intent(MainActivity.this, Note_Act.class);
                 startActivity(i);
             }
         });
-
-
         //Searching Function
         search.addTextChangedListener(new TextWatcher() {
             @Override
@@ -98,9 +99,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
-
     //Filter for searchbar
     private void filterCurrenciews(String currency) {
 
@@ -122,31 +121,36 @@ public class MainActivity extends AppCompatActivity {
 
     //method to fetch data from Api using Volley
     private void getCurrencyData() {
-
         loadingbar.setVisibility(View.VISIBLE);
+
         String url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
 
+
+
         RequestQueue requestQueue = Volley.newRequestQueue(this);
+
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 loadingbar.setVisibility(View.GONE);
 
                 try {
+
                     JSONArray dataArray = response.getJSONArray("data");
                     for (int i = 0; i < dataArray.length(); i++) {
                         JSONObject dataObj = dataArray.getJSONObject(i);
                         String name = dataObj.getString("name");
                         String symbol = dataObj.getString("symbol");
 
+                        JSONArray datatag = dataObj.getJSONArray("tags");
+                        String minabale = (String) datatag.get(0);
 
                         // creating object for quote  so we get access to USD-and then-->price
                         JSONObject quote = dataObj.getJSONObject("quote");
                         JSONObject USD = quote.getJSONObject("USD");
                         double price = USD.getDouble("price");
 
-                        currencyModelArrayList.add(new CurrencyModel(name, symbol, price));
-
+                        currencyModelArrayList.add(new CurrencyModel(name, symbol, minabale, price));
 
                     }
                     //notify Adapter that the data is changed;
@@ -155,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.d(TAG, "Data not received ");
-                    Toast.makeText(MainActivity.this, "Failed to retrieve data ", Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(MainActivity.this, "Failed to retrieve data ", Toast.LENGTH_SHORT).show();
                 }
 
                 //ADDING Search Function //WE need to create filter method to filter the data
@@ -166,24 +170,23 @@ public class MainActivity extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 loadingbar.setVisibility(View.GONE);
                 Toast.makeText(MainActivity.this, "Failed to load Data", Toast.LENGTH_LONG).show();
-
                 //here we extract the data FromPostMan
 
             }
-        })
-        {
+
+
+        }) {
 
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> header = new HashMap<>();
                 //we pass key and value from postman
-                header.put("","");
+                header.put("X-CMC_PRO_API_KEY", "686bbefe-b5e8-4c3c-945b-f3ada338a84c");
                 return header;
 
             }
         };
         requestQueue.add(jsonObjectRequest);
     }
-
 
 }

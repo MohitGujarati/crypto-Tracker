@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,7 +20,7 @@ public class CurrencyRVAdapter extends RecyclerView.Adapter<CurrencyRVAdapter.Vi
 
     private ArrayList<CurrencyModel> currencyModelArrayList;
     private Context context;
-    private static DecimalFormat df4 = new DecimalFormat("#.####");
+    private static DecimalFormat df4 = new DecimalFormat("#.##");
 
 
     //creating constructor
@@ -53,7 +54,34 @@ public class CurrencyRVAdapter extends RecyclerView.Adapter<CurrencyRVAdapter.Vi
         // call holder and set the data by call the get item before that we findview in view holder class
         holder.currencyNametv.setText(currencyModel.getName());
         holder.symbolTV.setText(currencyModel.getSymbol());
+        holder.tagstv.setText(currencyModel.getTags());
         holder.rateTv.setText("$ " + df4.format(currencyModel.getPrice()));
+        //Glide.with(context).load(currencyModel.getLogo()).into(holder.imgeview);
+
+        String value = holder.tagstv.getText().toString();
+        switch (value) {
+            case "mineable":
+                holder.tagstv.setBackgroundResource(R.drawable.bacground_minable);
+                break;
+
+            case "platform":
+                holder.tagstv.setBackgroundResource(R.drawable.bacground_platfrom);
+                break;
+
+
+            case "defi":
+                holder.tagstv.setBackgroundResource(R.drawable.background_defi);
+                break;
+            case "memes":
+                holder.tagstv.setBackgroundResource(R.drawable.backround_meme);
+                break;
+
+            default:
+                holder.tagstv.setBackgroundResource(R.drawable.bg);
+
+        }
+
+
     }
 
     @Override
@@ -61,17 +89,24 @@ public class CurrencyRVAdapter extends RecyclerView.Adapter<CurrencyRVAdapter.Vi
         return currencyModelArrayList.size();
     }
 
+
     // we create an inner class for View Holder
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView currencyNametv, symbolTV, rateTv;
+        private TextView currencyNametv, symbolTV, rateTv, tagstv;
+        private ImageView imgeview;
 
+        //  private ImageView imglogo;
         //we create a constructor of View Holder
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            imgeview=itemView.findViewById(R.id.imgeview);
             currencyNametv = itemView.findViewById(R.id.idTvname);
             symbolTV = itemView.findViewById(R.id.idTvSymbol);
             rateTv = itemView.findViewById(R.id.idTvCurrencyRate);
+            tagstv = itemView.findViewById(R.id.idTvCurrencyTags);
+
 
         }
     }
 }
+
