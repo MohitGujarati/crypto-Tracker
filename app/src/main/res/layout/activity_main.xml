@@ -1,46 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
     tools:context=".View.MainActivity">
 
-
-    <EditText
-        android:id="@+id/idSearch"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
+        android:background="#08802448"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/TextAppearance.Material3.HeadlineLarge"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Quickerrr"
+                android:textColor="#8E24AA"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/settingbtn"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="1dp"
+                android:background="#00FFFFFF"
+                app:icon="@drawable/ic_hamp"
+                app:iconSize="29dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/idSearch"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/searchbar"
+        android:drawableEnd="@drawable/search_icon"
+        android:hint="BitCoin, Ethereum ,Shinba Inu..."
         android:padding="10dp"
-        android:hint="Search"
-        android:textColor="@color/blackshad_1"
-        android:textColorHint="@color/blackshad_1" />
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textColorHint="#9A9A9A"
+        android:textSize="14dp"
+        android:textStyle="bold" />
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idcurrencies"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/idSearch"
-        tools:listitem="@layout/currencies_rv_item"
-        android:layout_marginTop="-2dp" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/Addnote"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_above="@+id/ll_main"
+        android:layout_below="@+id/idSearch"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="0dp"
+        android:elevation="-10dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        style="@style/Widget.Design.BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="20sp"
-        android:layout_marginBottom="90dp"
-        app:maxImageSize="50dp"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/note"
+        android:layout_marginBottom="6dp"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-        />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Addnote"
+            style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:padding="60dp"
+            android:textSize="14dp"
+            app:icon="@drawable/add_btn"
+            app:iconGravity="textStart"
+            app:iconSize="30dp"
+            app:strokeWidth="1dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/idnews"
+            style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:padding="60dp"
+            android:textSize="14dp"
+            app:icon="@drawable/crypto"
+            app:iconGravity="textStart"
+            app:iconSize="60dp"
+            app:strokeWidth="1dp" />
+
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/idLoader"

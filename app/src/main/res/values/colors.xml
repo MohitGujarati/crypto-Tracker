@@ -7,6 +7,14 @@
     <color name="teal_700">#230877</color>
     <color name="black">#802448</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="offwhite">#BABABA</color>
+
+    <color name="dark_maintext">#1E1D1D</color>
+    <color name="light_maintext">#FFFFFFFF</color>
+    <color name="dark_background">#FFFFFFFF</color>
+    <color name="light_background">#201413</color>
+
+
     <color name="blackshad_1">#FF3F4460</color>
     <color name="blackshad_2">#FF4C235E</color>
     <color name="blackshad_3">#FF802448</color>

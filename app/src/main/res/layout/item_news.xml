@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="?attr/materialCardViewOutlinedStyle"
+    android:layout_margin="5dp"
+    android:elevation="10dp"
+    android:textColor="#0C0005"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/item_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ProgressBar
+            android:id="@+id/progress_Image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/newsImage"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginBottom="110dp" />
+
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="match_parent"
+            android:layout_height="255dp"
+            android:layout_marginStart="1.5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="1.5dp"
+            android:layout_marginBottom="0dp"
+            android:contentDescription="the image is loading"
+            android:elevation="200dp"
+            android:scaleType="centerCrop"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@id/progress_Image" />
+
+        <TextView
+            android:id="@+id/textview"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newsImage"
+            android:padding="10dp"
+            android:text="TextView"
+             />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:text="TextView"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnurl"
+            style="?attr/materialButtonOutlinedStyle"
+            app:strokeColor="@color/blackshad_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:text="Read more..."
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+             />
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

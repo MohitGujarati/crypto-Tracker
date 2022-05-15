@@ -6,12 +6,13 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.AuthFailureError;
@@ -24,7 +25,6 @@ import com.android.volley.toolbox.Volley;
 import com.example.cryptocurrencytracker.Adapter.CurrencyRVAdapter;
 import com.example.cryptocurrencytracker.Model.CurrencyModel;
 import com.example.cryptocurrencytracker.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,25 +39,31 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar loadingbar;
     private EditText search;
     private RecyclerView currenciesRV;
-    FloatingActionButton addnote;
 
-
+    Button addnote,nightmode,Viewnews,settingbtn;
     private ArrayList<CurrencyModel> currencyModelArrayList;
     private CurrencyRVAdapter currencyRVAdapter;
 
+
+
     public String logourl="";
-
-
     public static final String TAG = "internetCall";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        // using toolbar as ActionBar
+     //   setSupportActionBar(toolbar);
         search = findViewById(R.id.idSearch);
         currenciesRV = findViewById(R.id.idcurrencies);
         loadingbar = findViewById(R.id.idLoader);
         addnote = findViewById(R.id.Addnote);
+        Viewnews = findViewById(R.id.idnews);
+        settingbtn = findViewById(R.id.settingbtn);
 
 
         //creating arraylist
@@ -66,11 +72,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Setting this adapter to recycle view
-        currenciesRV.setLayoutManager(new LinearLayoutManager(this));
+        currenciesRV.setLayoutManager(new GridLayoutManager(this,2));
         currenciesRV.setAdapter(currencyRVAdapter);
 
-
         getCurrencyData();
+
+        settingbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Setting", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
@@ -79,6 +91,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, Note_Act.class);
+                startActivity(i);
+            }
+        });
+
+        Viewnews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, News_Act.class);
                 startActivity(i);
             }
         });
@@ -100,6 +120,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
+
+
     //Filter for searchbar
     private void filterCurrenciews(String currency) {
 
@@ -112,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (filterList.isEmpty()) {
-            Toast.makeText(this, "NO currency found for the Searched query", Toast.LENGTH_LONG).show();
+         //   Toast.makeText(this, "", Toast.LENGTH_LONG).show();
         } else {
             currencyRVAdapter.Filtermethod(filterList);
         }
@@ -124,9 +148,6 @@ public class MainActivity extends AppCompatActivity {
         loadingbar.setVisibility(View.VISIBLE);
 
         String url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
-
-
-
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {

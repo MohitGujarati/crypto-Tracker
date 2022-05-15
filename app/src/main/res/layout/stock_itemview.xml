@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     android:layout_margin="4dp"
     android:elevation="18dp"
-    android:background="#FFFFFF"
+    android:backgroundTint="#B73E3E3E"
     app:cardCornerRadius="12dp">
 
     <LinearLayout
 
         android:id="@+id/idLLCourse"
-        android:background="#F2F4F6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:orientation="vertical">
 
         <!--text view for our course name-->
@@ -26,13 +23,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Course Name"
-            android:background="#80D8FF"
-            android:textColor="@color/blackshad_1"
+            android:text="stock Name"
             android:textSize="18sp" />
 
 
-        <!--text view for our course description-->
+
+        <TextView
+            android:id="@+id/TVStockDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Stock Description"
+
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TVStockDur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="stock Duration"
+
+            android:textSize="18sp" />
+
+
 
         <TextView
             android:id="@+id/TVStockBuy"
@@ -52,25 +66,8 @@
             android:text="Stock Sell"
             android:textColor="@color/white"
             android:textSize="18sp" />
-        <TextView
-            android:id="@+id/TVStockDesc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="Course Description"
-            android:textColor="@color/blackshad_1"
-            android:textSize="18sp" />
-
-        <!--text view for our course duration-->
-        <TextView
-            android:id="@+id/TVStockDur"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="Course Duration"
-            android:textColor="@color/blackshad_1"
-            android:textSize="18sp" />
 
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+
+</com.google.android.material.card.MaterialCardView>

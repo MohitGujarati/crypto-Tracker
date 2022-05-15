@@ -28,15 +28,16 @@ public class Note_Act extends AppCompatActivity {
     private static final int ADD_Stock_REQUEST = 1;
     private static final int EDIT_Stock_REQUEST = 2;
     private ViewModel viewModel;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_);
 
-  // initializing our variable for our recycler view and fab.
-                StockRV = findViewById(R.id.StockRV);
-        FloatingActionButton fab = findViewById(R.id.idFABAdd);
+        // initializing our variable for our recycler view and fab.
+        StockRV = findViewById(R.id.StockRV);
+        fab = findViewById(R.id.idFABAdd);
 
         // adding on click listener for floating action button.
         fab.setOnClickListener(new View.OnClickListener() {
@@ -117,8 +118,8 @@ public class Note_Act extends AppCompatActivity {
             String StockDescription = data.getStringExtra(NewStockActivity.EXTRA_DESCRIPTION);
             String StockDuration = data.getStringExtra(NewStockActivity.EXTRA_DURATION);
             String StockBuy = data.getStringExtra(NewStockActivity.EXTRA_BUY);
-            String StockSell= data.getStringExtra(NewStockActivity.EXTRA_Sell);
-            StockModel model = new StockModel(StockName, StockDescription, StockDuration,StockBuy,StockSell);
+            String StockSell = data.getStringExtra(NewStockActivity.EXTRA_Sell);
+            StockModel model = new StockModel(StockName, StockDescription, StockDuration, StockBuy, StockSell);
             viewModel.insert(model);
             Toast.makeText(this, "Stock saved", Toast.LENGTH_SHORT).show();
         } else if (requestCode == EDIT_Stock_REQUEST && resultCode == RESULT_OK) {
@@ -133,7 +134,7 @@ public class Note_Act extends AppCompatActivity {
             String StockBuy = data.getStringExtra(NewStockActivity.EXTRA_BUY);
             String StockSell = data.getStringExtra(NewStockActivity.EXTRA_Sell);
 
-            StockModel model = new StockModel(StockName, StockDesc, StockDuration,StockBuy,StockSell);
+            StockModel model = new StockModel(StockName, StockDesc, StockDuration, StockBuy, StockSell);
             model.setId(id);
 
             viewModel.update(model);

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.News_Act">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:textColor="#000000">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_allNews"
+                style="@style/Widget.Material3.Chip.Suggestion"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="All News"
+                android:textSize="14dp"
+                android:textColor="@color/white"
+                app:strokeColor="#A2A4A5"
+                app:strokeWidth="1dp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_allnews_Indian"
+                style="@style/Widget.Material3.Chip.Suggestion"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="INDIAN News"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                app:strokeColor="#A2A4A5"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_allnews_Usa"
+                style="@style/Widget.Material3.Chip.Suggestion"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="USA News"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                app:strokeColor="#A2A4A5"
+                app:strokeWidth="1dp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_allnews_tech"
+                style="@style/Widget.Material3.Chip.Suggestion"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Technology"
+               android:textColor="@color/white"
+                android:textSize="14dp"
+                app:strokeColor="#A2A4A5"
+                app:strokeWidth="1dp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_allnews_business"
+                style="@style/Widget.Material3.Chip.Suggestion"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Bussiness"
+
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                app:strokeColor="#A2A4A5"
+                app:strokeWidth="1dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_allnews_fashion"
+                style="@style/Widget.Material3.Chip.Suggestion"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Fashion"
+
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                app:strokeColor="#A2A4A5"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_football"
+                style="@style/Widget.Material3.Chip.Suggestion"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Football"
+
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                app:strokeColor="#A2A4A5"
+                app:strokeWidth="1dp"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_btn_allcrypto"
+                style="@style/Widget.Material3.Chip.Suggestion"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Crypto-currency"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:strokeColor="#A2A4A5"
+                app:strokeWidth="1dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/news_recview"
+        android:layout_width="match_parent"
+        android:layout_height="615dp"
+        android:layout_marginTop="2dp"
+        tools:listitem="@layout/item_news"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_views"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

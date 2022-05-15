@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
     android:orientation="vertical"
 
 
@@ -17,11 +16,12 @@
         android:id="@+id/StockRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="5dp" />
 
     <!--fab to add new courses-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/idFABAdd"
+        style="@style/Widget.Material3.Chip.Suggestion"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignParentEnd="true"
@@ -29,11 +29,11 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="18dp"
-        app:maxImageSize="35dp"
         android:layout_marginBottom="18dp"
-        android:src="@android:drawable/ic_input_add"
-        app:tint="@color/black"
         android:background="@color/white"
-        android:backgroundTint="@color/white"/>
+        android:backgroundTint="@color/white"
+        android:src="@android:drawable/ic_input_add"
+        app:maxImageSize="35dp"
+        app:tint="@color/black" />
 
 </RelativeLayout>

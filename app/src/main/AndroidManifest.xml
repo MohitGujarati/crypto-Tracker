@@ -12,16 +12,19 @@
         android:roundIcon="@drawable/iconimg"
         android:supportsRtl="true"
         android:theme="@style/Theme.CryptocurrencyTracker">
-        <activity android:name=".View.NewStockActivity">
-
-        </activity>
+        <activity
+            android:name=".View.News_Act"
+            android:exported="false" />
+        <activity android:name=".View.NewStockActivity"></activity>
         <activity android:name=".View.Note_Act" />
-        <activity android:name=".View.MainActivity">
+        <activity
+            android:name=".View.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

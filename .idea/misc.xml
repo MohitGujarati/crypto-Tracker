@@ -3,7 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/add_btn.xml" value="0.193" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/bacground_minable.xml" value="0.193" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/bacground_platfrom.xml" value="0.193" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/background_defi.xml" value="0.1335" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/backround_meme.xml" value="0.193" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/bg.xml" value="0.193" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/btnstyle.xml" value="0.197" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/card_background.xml" value="0.1775" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/crypto.xml" value="0.1" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/ic_baseline_edit_note_24.xml" value="0.1" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/ic_hamp.xml" value="0.197" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/ic_setting.xml" value="0.197" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/news.xml" value="0.1355" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/note.xml" value="0.1335" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/search_icon.xml" value="0.1" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/drawable/searchbar.xml" value="0.197" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/layout/activity_main.xml" value="0.3206672845227062" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/layout/activity_new_stock.xml" value="0.2" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/layout/activity_news.xml" value="0.3939745075318656" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/layout/activity_note_.xml" value="0.27447916666666666" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/layout/currencies_rv_item.xml" value="0.264" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/layout/each_tags_view.xml" value="0.2708333333333333" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/layout/item_news.xml" value="0.264" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/layout/stock_itemview.xml" value="0.264" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/menu/app_bar.xml" value="0.27447916666666666" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/flutterproject/CryptocurrencyTracker/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>

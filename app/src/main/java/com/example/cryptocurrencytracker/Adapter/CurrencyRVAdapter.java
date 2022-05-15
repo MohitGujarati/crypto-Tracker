@@ -44,6 +44,7 @@ public class CurrencyRVAdapter extends RecyclerView.Adapter<CurrencyRVAdapter.Vi
         View view = LayoutInflater.from(context).inflate(R.layout.currencies_rv_item, parent, false);
         //returning that adapter
         return new CurrencyRVAdapter.ViewHolder(view);
+
     }
 
     @Override
@@ -109,4 +110,6 @@ public class CurrencyRVAdapter extends RecyclerView.Adapter<CurrencyRVAdapter.Vi
         }
     }
 }
+
+
 
