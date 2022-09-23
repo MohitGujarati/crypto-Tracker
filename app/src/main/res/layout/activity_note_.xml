@@ -6,9 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
-
-
     >
 
     <!--recycler view to display our data-->
@@ -21,8 +18,8 @@
     <!--fab to add new courses-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/idFABAdd"
-        style="@style/Widget.Material3.Chip.Suggestion"
-        android:layout_width="100dp"
+        style="@style/ThemeOverlay.Material3.FloatingActionButton.Tertiary"
+        android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -34,6 +31,6 @@
         android:backgroundTint="@color/white"
         android:src="@android:drawable/ic_input_add"
         app:maxImageSize="35dp"
-        app:tint="@color/black" />
+        app:tint="@color/light_background" />
 
 </RelativeLayout>

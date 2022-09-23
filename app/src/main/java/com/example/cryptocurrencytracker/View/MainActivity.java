@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         loadingbar = findViewById(R.id.idLoader);
         addnote = findViewById(R.id.Addnote);
         Viewnews = findViewById(R.id.idnews);
-        settingbtn = findViewById(R.id.settingbtn);
+
 
 
         //creating arraylist
@@ -76,13 +76,6 @@ public class MainActivity extends AppCompatActivity {
         currenciesRV.setAdapter(currencyRVAdapter);
 
         getCurrencyData();
-
-        settingbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Setting", Toast.LENGTH_SHORT).show();
-            }
-        });
 
 
 

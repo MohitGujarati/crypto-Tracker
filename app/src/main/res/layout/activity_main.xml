@@ -9,7 +9,6 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:background="#08802448"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,17 +33,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/settingbtn"
-                android:layout_width="40dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="1dp"
-                android:background="#00FFFFFF"
-                app:icon="@drawable/ic_hamp"
-                app:iconSize="29dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -83,11 +71,11 @@
 
     <LinearLayout
         android:id="@+id/ll_main"
-        style="@style/Widget.Design.BottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="6dp"
+        android:background="#14FFFFFF"
         android:elevation="8dp"
         android:gravity="center"
         android:orientation="horizontal"
@@ -96,30 +84,29 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Addnote"
-            style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+            style="@style/Widget.Material3.Button.TonalButton.Icon"
             android:layout_width="80dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:padding="60dp"
             android:textSize="14dp"
             app:icon="@drawable/add_btn"
             app:iconGravity="textStart"
-            app:iconSize="30dp"
-            app:strokeWidth="1dp" />
+            app:iconPadding="0dp"
+            app:iconSize="30dp" />
 
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/idnews"
-            style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+            style="@style/Widget.Material3.Button.TonalButton.Icon"
             android:layout_width="80dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:padding="60dp"
             android:textSize="14dp"
             app:icon="@drawable/crypto"
             app:iconGravity="textStart"
-            app:iconSize="60dp"
-            app:strokeWidth="1dp" />
+            app:iconSize="50dp" />
 
     </LinearLayout>
 
