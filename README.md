@@ -1,4 +1,4 @@
-# Crypto-Tracker==Quickerrr
+# Crypto-Tracker=Quickerrr
 
 #### Crypto-Tracker | Java, kotlin, Volley lib. , Retrofit lib., Room database, Material design 
 •	Retrieved data from API to get real-time data of cryptocurrency present in the market which updates automatically after some time. Added different tags to identify coins on their types.
