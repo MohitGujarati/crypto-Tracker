@@ -17,8 +17,6 @@ class News_Act : AppCompatActivity() {
 
     lateinit var adapter: newsAdapter
     lateinit var newsrecview: RecyclerView;
-
-
     lateinit var btn_allnews_News: Button;
     lateinit var btn_allnews_Crypto: Button;
     lateinit var btn_allnews_Indian: Button;

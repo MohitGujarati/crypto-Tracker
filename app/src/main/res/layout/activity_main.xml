@@ -14,16 +14,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp">
+
 
 
             <TextView
                 android:id="@+id/textView"
                 style="@style/TextAppearance.Material3.HeadlineLarge"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:gravity="center"
                 android:text="Quickerrr"
                 android:textColor="#8E24AA"
@@ -33,30 +31,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/idSearch"
-
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@+id/appBarLayout"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="2dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="3dp"
         android:layout_marginBottom="2dp"
         android:background="@drawable/searchbar"
         android:drawableEnd="@drawable/search_icon"
         android:hint="BitCoin, Ethereum ,Shinba Inu..."
         android:padding="10dp"
         android:textAlignment="textStart"
+
         android:textColor="@color/black"
         android:textColorHint="#9A9A9A"
         android:textSize="14dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:backgroundTint="#45A6B2FF"
+        tools:ignore="NotSibling" />
 
 
     <androidx.recyclerview.widget.RecyclerView

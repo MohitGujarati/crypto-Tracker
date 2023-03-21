@@ -9,18 +9,18 @@
     <HorizontalScrollView
         android:id="@+id/horizontal_views"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-
+            android:layout_height="65dp"
             android:orientation="horizontal"
             android:padding="8dp"
+            android:background="#1DFFFFFF"
+            app:backgroundTint="#7CFFFFFF"
             android:textColor="#000000">
 
             <com.google.android.material.button.MaterialButton
@@ -31,7 +31,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="All News"
                 android:textColor="@color/light_background"
-                android:textSize="14dp"
+                android:textSize="10dp"
                 app:backgroundTint="@color/white"
                 app:strokeColor="#A2A4A5"
                 app:strokeWidth="1dp" />
@@ -139,7 +139,7 @@
         android:id="@+id/news_recview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="63dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

@@ -9,6 +9,7 @@ import retrofit2.http.Query
 
 
 const val BASE_URL="https://newsapi.org/"
+const val API_KEY="6566c770e39349c1b7f924d0bc85a62f"
 const val NEWS_API="v2/top-headlines?country=in&apiKey=$API_KEY"
 const val NEWS_API2="v2/everything?q=cryptocurrency?&apiKey=$API_KEY"
 const val NEWS_API3_INDIA="v2/everything?q=India&from=2022-03-17&sortBy=publishedAt?&apiKey=$API_KEY"
